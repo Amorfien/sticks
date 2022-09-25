@@ -7,7 +7,7 @@
 
 import Foundation
 
-let cat = """
+let sadCat = """
 
 　　　　　／＞ 　  フ
 　　　　　| 　_　 _|
@@ -17,7 +17,6 @@ let cat = """
 　／￣|　　 |　|　|
 　| (￣ヽ＿_ヽ_)_)
 　＼二つ
-
 """
 
 var sticks: [Character] = []
@@ -40,7 +39,7 @@ func removing() {
     case true: print("\nИГРОК 1")
     case false: print("\nИГРОК 2")
     }
-    if sticks.count == 1 { loosing() }
+//    if sticks.count == 1 { loosing() }
     print("Вытащите от 1 до 3 палочек")
     let remove = Int(readLine()!) ?? 0
     guard remove>0 && remove<=3 else {
@@ -60,7 +59,8 @@ while sticks.count > 0 {
 }
 
 func loosing() {
-    print("   YOU LOOSE!\n")
-    print(cat)
+    print("\n\n\n\n\n\n\n\n\n\n        YOU LOOSE!")
+    print(sadCat)
+    print(player ? "         ИГРОК 1\n\n" : "         ИГРОК 2\n\n")
     exit(4)
 }
